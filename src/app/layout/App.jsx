@@ -1,11 +1,10 @@
-import { Button } from "semantic-ui-react";
-import "./styles.css";
+import EventDashboard from "./events/eventDashboard/EventDashboard";
 
 function App() {
   return (
     <div className='App'>
       <h1>Revents</h1>
-      <Button icon='user' content='React Button' color='red' />
+      <EventDashboard />
     </div>
   );
 }
