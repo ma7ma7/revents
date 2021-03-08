@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "semantic-ui-css/semantic.min.css";
 import App from "./app/layout/App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -8,7 +9,7 @@ const render = () => {
 };
 
 if (module.hot) {
-  module.hot.accept("./App.js", () => {
+  module.hot.accept("./app/layout/App.jsx", () => {
     setTimeout(render);
   });
 }
