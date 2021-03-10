@@ -2,7 +2,7 @@ import React from "react";
 import { DateInput } from "semantic-ui-calendar-react";
 import { Button, Form, Header, Segment } from "semantic-ui-react";
 
-export default function EventForm() {
+export default function EventForm({ setFormOpen }) {
   return (
     <Segment clearing>
       <Header content='Create new Project' />
@@ -33,11 +33,18 @@ export default function EventForm() {
             placeholder='Date'
             iconPosition='left'
             popupPosition='bottom left'
+            value=''
+            onChange={() => {}}
           />
         </Form.Field>
 
         <Button type='submit' floated='right' positive content='submit' />
-        <Button type='submit' floated='right' content='cancel' />
+        <Button
+          onClick={() => setFormOpen(false)}
+          type='submit'
+          floated='right'
+          content='cancel'
+        />
       </Form>
     </Segment>
   );
